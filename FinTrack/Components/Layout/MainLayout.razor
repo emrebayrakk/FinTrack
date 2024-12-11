@@ -1,0 +1,22 @@
+﻿@inherits LayoutComponentBase
+@inject CookieThemeService CookieThemeService
+<RadzenComponents @rendermode="new InteractiveServerRenderMode(prerender: false)" />
+<RadzenLayout> 
+    <RadzenHeader class="rz-background-color-base-900">
+        <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0">
+            <RadzenSidebarToggle Click="@(() => sidebarExpanded = !sidebarExpanded)" />
+            <RadzenLabel Text="Header" />
+        </RadzenStack>
+    </RadzenHeader>
+    <RadzenSidebar Responsive="false" Style="width: max-content">
+        <RadzenPanelMenu DisplayStyle="@(sidebarExpanded ? MenuItemDisplayStyle.IconAndText : MenuItemDisplayStyle.Icon)" ShowArrow="false">
+            <RadzenPanelMenuItem Path="/" Text="Overview" Icon="dashboard" />
+            <RadzenPanelMenuItem Path="/weather" Text="Dashboard" Icon="home" />
+        </RadzenPanelMenu>
+    </RadzenSidebar>
+    <RadzenBody>
+        <div class="rz-p-4">
+            @Body
+        </div>
+    </RadzenBody>
+</RadzenLayout>
