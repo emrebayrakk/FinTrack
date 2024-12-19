@@ -1,4 +1,7 @@
 ﻿@page "/"
 
 <PageTitle>Home</PageTitle>
-<RadzenButton class="rz-border-radius-6" Click=@(args => OnClick()) Text="Publish" Icon="check_circle" ButtonStyle="ButtonStyle.Success" />
+<RadzenStack Gap="0.5rem" Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center">
+    <RadzenLabel Text="Hisse Verileri Çek:  " />
+    <RadzenButton class="rz-border-radius-6" Click=@(args => OnClick()) Text="Publish" Icon="check_circle" ButtonStyle="ButtonStyle.Success" />
+</RadzenStack>

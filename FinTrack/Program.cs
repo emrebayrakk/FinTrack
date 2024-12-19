@@ -1,4 +1,6 @@
 using FinTrack.Components;
+using FinTrack.Data;
+using FinTrack.Services;
 using Radzen;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +10,9 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
 builder.Services.AddRadzenComponents();
+builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDbSettings"));
+builder.Services.AddScoped<IDbConnectionFactory, MongoDbConnectionFactory>();
+builder.Services.AddScoped<IFinService,FinService>();
 
 builder.Services.AddRadzenCookieThemeService(options =>
 {

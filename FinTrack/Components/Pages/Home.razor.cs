@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using FinTrack.Services;
+using Microsoft.AspNetCore.Components;
 using Radzen;
 
 namespace FinTrack.Components.Pages
@@ -7,10 +8,21 @@ namespace FinTrack.Components.Pages
     {
         [Inject]
         private NotificationService NotificationService { get; set; }
+        [Inject] private IFinService FinService { get; set; }
 
-        private void OnClick()
+        private async void OnClick()
         {
-            NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Success Summary", Detail = "Success Detail", Duration = 4000 });
+            var res = await FinService.AllReadHisse();
+            if (res.Code != 200) 
+            {
+                NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Error", Detail = res.Message, Duration = 4000 });
+            }
+            else
+            {
+                NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Success Summary", Detail = res.Message, Duration = 4000 });
+            }
+
+            
         }
     }
 }
