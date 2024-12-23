@@ -6,7 +6,7 @@ namespace FinTrack.Services
     public interface IFinService
     {
         Task<ResponseData<AllHisseResponse>> AllReadHisse();
-        Task<ResponseData<DetayliResponse>> DetayliHisse();
+        Task<ResponseData<DetayliResponse>> DetayliHisse(string hisseAdi);
         IQueryable<BorsaHisse> GetHisseler();
     }
 }

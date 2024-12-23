@@ -9,10 +9,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
+builder.Services.AddHttpClient();
 builder.Services.AddRadzenComponents();
 builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDbSettings"));
 builder.Services.AddScoped<IDbConnectionFactory, MongoDbConnectionFactory>();
 builder.Services.AddScoped<IFinService,FinService>();
+
 
 builder.Services.AddRadzenCookieThemeService(options =>
 {

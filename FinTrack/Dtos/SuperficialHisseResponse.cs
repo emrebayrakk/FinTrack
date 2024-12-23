@@ -1,81 +1,220 @@
-﻿namespace FinTrack.Dtos
+﻿
+using System;
+using System.Text.Json.Serialization;
+namespace FinTrack.Dtos
 {
+
     public class SuperficialHisseResponse
     {
-        public string code { get; set; }
-        public Data data { get; set; }
+        [JsonPropertyName("code")]
+        public string Code { get; set; }
+
+        [JsonPropertyName("data")]
+        public Data Data { get; set; }
     }
+
     public class Data
     {
-        public HisseYuzeysel hisseYuzeysel { get; set; }
-        public object stc_5_3 { get; set; }
-        public object rsI14 { get; set; }
-        public object mov10 { get; set; }
-        public object ccI14 { get; set; }
+        [JsonPropertyName("hisseYuzeysel")]
+        public HisseYuzeysel HisseYuzeysel { get; set; }
+
+        [JsonPropertyName("stc_5_3")]
+        public object Stc_5_3 { get; set; }
+
+        [JsonPropertyName("rsI14")]
+        public object RsI14 { get; set; }
+
+        [JsonPropertyName("mov10")]
+        public object Mov10 { get; set; }
+
+        [JsonPropertyName("ccI14")]
+        public object CcI14 { get; set; }
     }
 
     public class HisseYuzeysel
     {
-        public int sembolid { get; set; }
-        public string sembol { get; set; }
-        public DateTime tarih { get; set; }
-        public int sektorid { get; set; }
-        public double alis { get; set; }
-        public double satis { get; set; }
-        public int acilis { get; set; }
-        public double yuksek { get; set; }
-        public double yukseK1 { get; set; }
-        public double yukseK2 { get; set; }
-        public double dusuk { get; set; }
-        public double dusuK1 { get; set; }
-        public double dusuK2 { get; set; }
-        public double kapanis { get; set; }
-        public double kapaniS1 { get; set; }
-        public double kapaniS2 { get; set; }
-        public int hacimlot { get; set; }
-        public int hacimloT1 { get; set; }
-        public int hacimloT2 { get; set; }
-        public double aort { get; set; }
-        public double aorT1 { get; set; }
-        public double aorT2 { get; set; }
-        public int hacimtldun { get; set; }
-        public double hacimyuzdedegisim { get; set; }
-        public int hacimtl { get; set; }
-        public int hacimtL1 { get; set; }
-        public int hacimtL2 { get; set; }
-        public double dunkukapanis { get; set; }
-        public double oncekikapanis { get; set; }
-        public int izafikapanis { get; set; }
-        public double tavan { get; set; }
-        public double taban { get; set; }
-        public double yilyuksek { get; set; }
-        public double yildusuk { get; set; }
-        public double ayyuksek { get; set; }
-        public double aydusuk { get; set; }
-        public double haftayuksek { get; set; }
-        public double haftadusuk { get; set; }
-        public double oncekiyilkapanis { get; set; }
-        public double oncekiaykapanis { get; set; }
-        public double oncekihaftakapanis { get; set; }
-        public double yilortalama { get; set; }
-        public double ayortalama { get; set; }
-        public double haftaortalama { get; set; }
-        public double yuzdedegisimS1 { get; set; }
-        public double yuzdedegisimS2 { get; set; }
-        public double yuzdedegisim { get; set; }
-        public double fiyatadimi { get; set; }
-        public int kaykar { get; set; }
-        public long sermaye { get; set; }
-        public double saklamaor { get; set; }
-        public long netkar { get; set; }
-        public double net { get; set; }
-        public double fiyatkaz { get; set; }
-        public long piydeg { get; set; }
-        public object kapanisfark { get; set; }
-        public string donem { get; set; }
-        public long ozsermaye { get; set; }
-        public double beta { get; set; }
-        public double xU100AG { get; set; }
-        public string aciklama { get; set; }
+        [JsonPropertyName("sembolid")]
+        public int Sembolid { get; set; }
+
+        [JsonPropertyName("sembol")]
+        public string Sembol { get; set; }
+
+        [JsonPropertyName("tarih")]
+        public DateTime Tarih { get; set; }
+
+        [JsonPropertyName("sektorid")]
+        public int Sektorid { get; set; }
+
+        [JsonPropertyName("alis")]
+        public double Alis { get; set; }
+
+        [JsonPropertyName("satis")]
+        public double Satis { get; set; }
+
+        [JsonPropertyName("acilis")]
+        public double Acilis { get; set; }
+
+        [JsonPropertyName("yuksek")]
+        public double Yuksek { get; set; }
+
+        [JsonPropertyName("yukseK1")]
+        public double YukseK1 { get; set; }
+
+        [JsonPropertyName("yukseK2")]
+        public double YukseK2 { get; set; }
+
+        [JsonPropertyName("dusuk")]
+        public double Dusuk { get; set; }
+
+        [JsonPropertyName("dusuK1")]
+        public double DusuK1 { get; set; }
+
+        [JsonPropertyName("dusuK2")]
+        public double DusuK2 { get; set; }
+
+        [JsonPropertyName("kapanis")]
+        public double Kapanis { get; set; }
+
+        [JsonPropertyName("kapaniS1")]
+        public double KapaniS1 { get; set; }
+
+        [JsonPropertyName("kapaniS2")]
+        public double KapaniS2 { get; set; }
+
+        [JsonPropertyName("hacimlot")]
+        public double Hacimlot { get; set; }
+
+        [JsonPropertyName("hacimloT1")]
+        public double HacimloT1 { get; set; }
+
+        [JsonPropertyName("hacimloT2")]
+        public double HacimloT2 { get; set; }
+
+        [JsonPropertyName("aort")]
+        public double Aort { get; set; }
+
+        [JsonPropertyName("aorT1")]
+        public double AorT1 { get; set; }
+
+        [JsonPropertyName("aorT2")]
+        public double AorT2 { get; set; }
+
+        [JsonPropertyName("hacimtldun")]
+        public double Hacimtldun { get; set; }
+
+        [JsonPropertyName("hacimyuzdedegisim")]
+        public double Hacimyuzdedegisim { get; set; }
+
+        [JsonPropertyName("hacimtl")]
+        public double Hacimtl { get; set; }
+
+        [JsonPropertyName("hacimtL1")]
+        public double HacimtL1 { get; set; }
+
+        [JsonPropertyName("hacimtL2")]
+        public double HacimtL2 { get; set; }
+
+        [JsonPropertyName("dunkukapanis")]
+        public double Dunkukapanis { get; set; }
+
+        [JsonPropertyName("oncekikapanis")]
+        public double Oncekikapanis { get; set; }
+
+        [JsonPropertyName("izafikapanis")]
+        public double Izafikapanis { get; set; }
+
+        [JsonPropertyName("tavan")]
+        public double Tavan { get; set; }
+
+        [JsonPropertyName("taban")]
+        public double Taban { get; set; }
+
+        [JsonPropertyName("yilyuksek")]
+        public double Yilyuksek { get; set; }
+
+        [JsonPropertyName("yildusuk")]
+        public double Yildusuk { get; set; }
+
+        [JsonPropertyName("ayyuksek")]
+        public double Ayyuksek { get; set; }
+
+        [JsonPropertyName("aydusuk")]
+        public double Aydusuk { get; set; }
+
+        [JsonPropertyName("haftayuksek")]
+        public double Haftayuksek { get; set; }
+
+        [JsonPropertyName("haftadusuk")]
+        public double Haftadusuk { get; set; }
+
+        [JsonPropertyName("oncekiyilkapanis")]
+        public double Oncekiyilkapanis { get; set; }
+
+        [JsonPropertyName("oncekiaykapanis")]
+        public double Oncekiaykapanis { get; set; }
+
+        [JsonPropertyName("oncekihaftakapanis")]
+        public double Oncekihaftakapanis { get; set; }
+
+        [JsonPropertyName("yilortalama")]
+        public double Yilortalama { get; set; }
+
+        [JsonPropertyName("ayortalama")]
+        public double Ayortalama { get; set; }
+
+        [JsonPropertyName("haftaortalama")]
+        public double Haftaortalama { get; set; }
+
+        [JsonPropertyName("yuzdedegisimS1")]
+        public double YuzdedegisimS1 { get; set; }
+
+        [JsonPropertyName("yuzdedegisimS2")]
+        public double YuzdedegisimS2 { get; set; }
+
+        [JsonPropertyName("yuzdedegisim")]
+        public double Yuzdedegisim { get; set; }
+
+        [JsonPropertyName("fiyatadimi")]
+        public double Fiyatadimi { get; set; }
+
+        [JsonPropertyName("kaykar")]
+        public double Kaykar { get; set; }
+
+        [JsonPropertyName("sermaye")]
+        public double Sermaye { get; set; }
+
+        [JsonPropertyName("saklamaor")]
+        public double Saklamaor { get; set; }
+
+        [JsonPropertyName("netkar")]
+        public double Netkar { get; set; }
+
+        [JsonPropertyName("net")]
+        public double Net { get; set; }
+
+        [JsonPropertyName("fiyatkaz")]
+        public double Fiyatkaz { get; set; }
+
+        [JsonPropertyName("piydeg")]
+        public double Piydeg { get; set; }
+
+        [JsonPropertyName("kapanisfark")]
+        public object Kapanisfark { get; set; }
+
+        [JsonPropertyName("donem")]
+        public string Donem { get; set; }
+
+        [JsonPropertyName("ozsermaye")]
+        public double Ozsermaye { get; set; }
+
+        [JsonPropertyName("beta")]
+        public double Beta { get; set; }
+
+        [JsonPropertyName("xU100AG")]
+        public double XU100AG { get; set; }
+
+        [JsonPropertyName("aciklama")]
+        public string Aciklama { get; set; }
     }
+
 }
