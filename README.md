@@ -13,4 +13,4 @@
 ![Hisse Bilgileri](https://i.postimg.cc/WpdVHG3j/Ekran-g-r-nt-s-2024-12-23-151807.png)
 
 #### Yüzeysel Hisse Bilgisi
-![Hisse Bilgileri](https://i.postimg.cc/1RbSh8nF/Ekran-g-r-nt-s-2024-12-23-151844.png)
+![Hisse Bilgileri](https://github.com/emrebayrakk/FinTrack/blob/master/FinTrack/wwwroot/yuzeysel.png)
