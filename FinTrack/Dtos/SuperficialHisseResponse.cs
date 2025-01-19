@@ -211,7 +211,7 @@ namespace FinTrack.Dtos
         public double Beta { get; set; }
 
         [JsonPropertyName("xU100AG")]
-        public double XU100AG { get; set; }
+        public double? XU100AG { get; set; }
 
         [JsonPropertyName("aciklama")]
         public string Aciklama { get; set; }

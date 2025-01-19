@@ -1,0 +1,132 @@
+﻿.main-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #f7f9fc;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-input {
+    width: 70%;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #007bff;
+    transition: box-shadow 0.3s ease;
+}
+
+    .search-input:focus {
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.8);
+    }
+
+.search-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+    .search-button:hover {
+        transform: scale(1.05);
+    }
+
+.loading-bar {
+    margin-top: 20px;
+}
+
+.details-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.details-header {
+    color: #333333;
+    margin-bottom: 15px;
+    font-weight: 600;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.details-date {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: gray;
+}
+
+.info-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.info-card {
+    width: 48%;
+    padding: 15px;
+    background-color: #eaf5ff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.8s ease-out;
+}
+
+    .info-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+.info-title {
+    color: #007bff;
+}
+
+.error-alert {
+    margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.animate-slide-in {
+    animation: slideIn 0.8s ease-out;
+}
